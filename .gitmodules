@@ -16,3 +16,6 @@
 [submodule "bundle/vim-blockle"]
 	path = bundle/vim-blockle
 	url = https://github.com/jgdavey/vim-blockle.git
+[submodule "bundle/emmet-vim"]
+	path = bundle/emmet-vim
+	url = git@github.com:mattn/emmet-vim.git
