@@ -29,3 +29,5 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Syntastic:
 let g:syntastic_check_on_open = 1
 
+" Enable HTML recognition (e.g. for snippets) for ERB files.
+autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
