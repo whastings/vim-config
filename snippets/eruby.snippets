@@ -8,3 +8,12 @@ snippet e
 	<% ${1} %>
 snippet =
 	<%= ${1} %>
+snippet rform
+	<form action="<%= ${1} %>" method="post" accept-charset="utf-8">
+	  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	  ${3}
+	  <input type="submit" value="${2}">
+	</form
+snippet rinput
+	<label for="${1}">${2}</label>
+	<input type="${3}" name="${4}" id="${5}" value="<%= ${6} %>">
