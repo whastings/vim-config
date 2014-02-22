@@ -22,3 +22,6 @@
 [submodule "bundle/xmledit"]
 	path = bundle/xmledit
 	url = https://github.com/sukima/xmledit.git
+[submodule "bundle/match_tag"]
+	path = bundle/match_tag
+	url = https://github.com/gregsexton/MatchTag.git
