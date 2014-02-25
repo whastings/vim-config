@@ -29,5 +29,8 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Syntastic:
 let g:syntastic_check_on_open = 1
 
+" Emmet:
+let g:user_emmet_leader_key='<C-Z>'
+
 " Enable HTML recognition (e.g. for snippets) for ERB files.
 autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
