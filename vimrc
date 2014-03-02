@@ -20,6 +20,8 @@ imap <C-a> <esc>0i
 set pastetoggle=<F2>
 map <C-t> :NERDTreeToggle<CR>
 map c \c " Map just c to comment toggle.
+" Toggle semicolon at end of current line.
+nnoremap ;; :s/\v(.)$/\=submatch(1)==';' ? '' : submatch(1).';'<CR>
 
 execute pathogen#infect()
 
