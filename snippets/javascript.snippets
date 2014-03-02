@@ -8,3 +8,10 @@ snippet typeof
 	typeof ${1:object} === '${2:type}'
 snippet makearray
 	Array.prototype.slice.call(${1:arguments}, 0);
+snippet strict
+	"use strict";
+snippet iife
+	(function(${1}) {
+	  "use strict";
+	  ${3}
+	})(${2});
