@@ -19,7 +19,7 @@ imap <C-e> <esc>$i<right>
 imap <C-a> <esc>0i
 set pastetoggle=<F2>
 map <C-t> :NERDTreeToggle<CR>
-map c \c " Map just c to comment toggle.
+map C \c " Map just C to comment toggle.
 " Toggle semicolon at end of current line.
 nnoremap ;; :s/\v(.)$/\=submatch(1)==';' ? '' : submatch(1).';'<CR>
 
@@ -34,5 +34,7 @@ let g:syntastic_check_on_open = 1
 " Emmet:
 let g:user_emmet_leader_key='<C-Z>'
 
-" Enable HTML recognition (e.g. for snippets) for ERB files.
+" Filetypes:
 autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
+autocmd BufNewFile,BufRead *.hbs set filetype=html
+
