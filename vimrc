@@ -36,5 +36,7 @@ let g:user_emmet_leader_key='<C-Z>'
 
 " Filetypes:
 autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
+autocmd BufNewFile,BufRead *.json.jbuilder set filetype=ruby
+autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
 autocmd BufNewFile,BufRead *.hbs set filetype=html
 
