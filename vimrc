@@ -39,4 +39,6 @@ autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
 autocmd BufNewFile,BufRead *.json.jbuilder set filetype=ruby
 autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
 autocmd BufNewFile,BufRead *.hbs set filetype=html
+autocmd BufNewFile,BufRead *.jst.ejs set filetype=html
+autocmd BufNewFile,BufRead *.ejs set filetype=html
 
