@@ -19,6 +19,7 @@ imap <C-e> <esc>$i<right>
 imap <C-a> <esc>0i
 set pastetoggle=<F2>
 map <C-t> :NERDTreeToggle<CR>
+map <C-h> :set hls!<CR>
 map C \c " Map just C to comment toggle.
 " Toggle semicolon at end of current line.
 nnoremap ;; :s/\v(.)$/\=submatch(1)==';' ? '' : submatch(1).';'<CR>
