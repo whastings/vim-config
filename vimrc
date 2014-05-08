@@ -28,9 +28,10 @@ map C \c " Map just C to comment toggle.
 nnoremap ;; :s/\v(.)$/\=submatch(1)==';' ? '' : submatch(1).';'<CR>
 " Edit another file in the same directory as the current file
 " " uses expression to extract path from current file's path
-map <Leader>e :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR><CR>
-map <Leader>s :split <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR><CR>
-map <Leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR><CR>
+map <Leader>e :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR><CR><CR>
+map <Leader>s :split <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR><CR><CR>
+map <Leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR><CR><CR>
+map <Leader>T :call Send_to_Tmux("cd " . escape(expand('%:p:h'), ' ') . "\n")<CR>
 
 execute pathogen#infect()
 
@@ -43,6 +44,12 @@ let g:syntastic_check_on_open = 1
 " Emmet:
 let g:user_emmet_leader_key='<C-Z>'
 
+" TSlime:
+let g:tslime = {}
+let g:tslime['session'] = 'home'
+let g:tslime['window'] = 'editor'
+let g:tslime['pane'] = 1
+
 " Filetypes:
 autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
 autocmd BufNewFile,BufRead *.json.jbuilder set filetype=ruby
@@ -50,4 +57,7 @@ autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
 autocmd BufNewFile,BufRead *.hbs set filetype=html
 autocmd BufNewFile,BufRead *.jst.ejs set filetype=html
 autocmd BufNewFile,BufRead *.ejs set filetype=html
-
+augroup markdown
+    au!
+    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=markdown
+augroup END
