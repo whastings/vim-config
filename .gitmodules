@@ -52,3 +52,6 @@
 [submodule "bundle/vim-javascript-syntax"]
 	path = bundle/vim-javascript-syntax
 	url = https://github.com/jelera/vim-javascript-syntax.git
+[submodule "bundle/tslime.vim"]
+	path = bundle/tslime.vim
+	url = https://github.com/jgdavey/tslime.vim.git
