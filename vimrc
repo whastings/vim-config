@@ -1,7 +1,29 @@
-colorscheme darkBlue
+" BUNDLES:
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+  Plugin 'kien/ctrlp.vim'
+  Plugin 'gregsexton/MatchTag'
+  Plugin 'scrooloose/nerdcommenter'
+  Plugin 'scrooloose/nerdtree'
+  Plugin 'garbas/vim-snipmate'
+  Plugin 'ervandew/supertab'
+  Plugin 'scrooloose/syntastic'
+  Plugin 'jgdavey/vim-blockle'
+  Plugin 'jelera/vim-javascript-syntax'
+  Plugin 'tpope/vim-markdown'
+  Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+  Plugin 'honza/vim-snippets'
+  Plugin 'gmarik/Vundle.vim'
+  Plugin 'sukima/xmledit'
+  Plugin 'jgdavey/tslime.vim'
+  Plugin 'tomtom/tlib_vim' " For vim-snipmate.
+  Plugin 'MarcWeber/vim-addon-mw-utils' " For vim-snipmate.
+call vundle#end()
+filetype plugin indent on
 
-" # Settings:
-filetype plugin on
+" SETTINGS:
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -14,8 +36,9 @@ highlight ColorColumn ctermbg=lightgrey " Make column gray.
 set laststatus=2 " Always show status line.
 set tags=./.ctags; " Source for ctags tags.
 :ino <C-C> <Esc> " Ensure ctrl + c triggers insertleave event.
+colorscheme darkBlue
 
-" Key Bindings:
+" KEY BINDINGS:
 " map CTRL-E to end-of-line (insert mode)
 imap <C-e> <esc>$i<right>
 " map CTRL-A to beginning-of-line (insert mode)
@@ -33,10 +56,10 @@ map <Leader>s :split <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR><CR><CR>
 map <Leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR><CR><CR>
 map <Leader>T :call Send_to_Tmux("cd " . escape(expand('%:p:h'), ' ') . "\n")<CR>
 
-execute pathogen#infect()
-
 " Remove trailing whitespace:
 autocmd BufWritePre * :%s/\s\+$//e
+
+" PLUGIN SETTINGS:
 
 " Syntastic:
 let g:syntastic_check_on_open = 1
@@ -50,7 +73,7 @@ let g:tslime['session'] = 'home'
 let g:tslime['window'] = 'editor'
 let g:tslime['pane'] = 1
 
-" Filetypes:
+" FILETYPES:
 autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
 autocmd BufNewFile,BufRead *.json.jbuilder set filetype=ruby
 autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
