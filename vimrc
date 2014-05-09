@@ -21,6 +21,7 @@ call vundle#begin()
   Plugin 'jgdavey/tslime.vim'
   Plugin 'tomtom/tlib_vim' " For vim-snipmate.
   Plugin 'MarcWeber/vim-addon-mw-utils' " For vim-snipmate.
+  Plugin 'matze/vim-move'
 call vundle#end()
 filetype plugin indent on
 
@@ -83,6 +84,14 @@ let g:tslime['pane'] = 1
 
 " Remove trailing whitespace:
 autocmd BufWritePre * :%s/\s\+$//e
+
+" Properly map alt key:
+let c='a'
+while c <= 'z'
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
 
 
 " FILETYPES:
