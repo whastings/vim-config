@@ -24,6 +24,7 @@ call vundle#begin()
   Plugin 'matze/vim-move'
 call vundle#end()
 filetype plugin indent on
+syntax on
 
 
 " SETTINGS:
