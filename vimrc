@@ -22,6 +22,7 @@ call vundle#begin()
   Plugin 'tomtom/tlib_vim' " For vim-snipmate.
   Plugin 'MarcWeber/vim-addon-mw-utils' " For vim-snipmate.
   Plugin 'matze/vim-move'
+  Plugin 'tpope/vim-endwise'
 call vundle#end()
 filetype plugin indent on
 syntax on
