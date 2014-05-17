@@ -68,6 +68,10 @@ map <Leader>s :split <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR><CR><CR>
 map <Leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR><CR><CR>
 map <Leader>T :call Send_to_Tmux("cd " . escape(expand('%:p:h'), ' ') . "\n")<CR>
 
+" Map ctrl-s to save and ctrl-q to quit.
+nmap <c-s> :w<CR>
+nmap <c-q> :q<CR>
+
 " PLUGIN SETTINGS:
 
 " Syntastic:
