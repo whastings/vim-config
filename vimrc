@@ -26,6 +26,8 @@ call vundle#begin()
 call vundle#end()
 filetype plugin indent on
 syntax on
+" Load powerline.
+set rtp+=~/dot-files/vendor/powerline/powerline/bindings/vim
 
 
 " SETTINGS:
