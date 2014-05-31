@@ -5,6 +5,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
   Plugin 'kien/ctrlp.vim'
+  Plugin 'mattn/emmet-vim'
   Plugin 'gregsexton/MatchTag'
   Plugin 'scrooloose/nerdcommenter'
   Plugin 'scrooloose/nerdtree'
@@ -80,7 +81,9 @@ nmap <c-q> :q<CR>
 let g:syntastic_check_on_open = 1
 
 " Emmet:
-let g:user_emmet_leader_key='<C-Z>'
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+imap <C-y> <Esc>:call emmet#expandAbbr(0, "")<CR>a
 
 " TSlime:
 let g:tslime = {}
