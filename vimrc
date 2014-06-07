@@ -83,7 +83,7 @@ let g:syntastic_check_on_open = 1
 " Emmet:
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
-imap <C-y> <Esc>:call emmet#expandAbbr(0, "")<CR>a
+imap <C-y> <Esc>:call emmet#expandAbbr(0, "")<CR>i
 
 " TSlime:
 let g:tslime = {}
