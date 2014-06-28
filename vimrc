@@ -80,6 +80,11 @@ map <Leader>T :call Send_to_Tmux("cd " . escape(expand('%:p:h'), ' ') . "\n")<CR
 nmap <c-s> :w<CR>
 nmap <c-q> :q<CR>
 
+" Use space to scroll
+nmap <Space> <C-e>
+nmap <C-@> <C-y>
+
+
 " PLUGIN SETTINGS:
 
 " Syntastic:
