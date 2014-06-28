@@ -18,6 +18,7 @@ call vundle#begin()
   Plugin 'jeffkreeftmeijer/vim-numbertoggle'
   Plugin 'honza/vim-snippets'
   Plugin 'gmarik/Vundle.vim'
+  Plugin 'majutsushi/tagbar'
   Plugin 'sukima/xmledit'
   Plugin 'jgdavey/tslime.vim'
   Plugin 'tomtom/tlib_vim' " For vim-snipmate.
@@ -65,6 +66,7 @@ set pastetoggle=<F2>
 map <C-t> :NERDTreeToggle<CR>
 map <C-h> :set hls!<CR> " Toggle search result highlighting.
 map C \c " Map just C to comment toggle.
+nmap <C-l> :TagbarToggle<CR>
 
 " Toggle semicolon at end of current line.
 nnoremap ;; :s/\v(.)$/\=submatch(1)==';' ? '' : submatch(1).';'<CR>
