@@ -44,8 +44,13 @@ set colorcolumn=80 " Add a ruler.
 set laststatus=2 " Always show status line.
 set tags=./.ctags; " Source for ctags tags.
 :ino <C-C> <Esc> " Ensure ctrl + c triggers insertleave event.
+
+
+" COLORS:
+
 colorscheme darkBlue
 highlight ColorColumn ctermbg=lightgrey " Make column gray.
+highlight Comment term=bold ctermfg=lightblue
 
 
 " KEY BINDINGS:
