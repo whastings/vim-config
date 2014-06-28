@@ -116,4 +116,6 @@ autocmd BufNewFile,BufRead *.ejs set filetype=html
 augroup markdown
     au!
     au BufNewFile,BufRead *.md,*.markdown setlocal filetype=markdown
+    au BufNewFile,BufRead *.md,*.markdown setlocal textwidth=80
+    au BufNewFile,BufRead *.md,*.markdown setlocal wrapmargin=2
 augroup END
