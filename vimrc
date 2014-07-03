@@ -86,6 +86,10 @@ nmap <c-q> :q<CR>
 nmap <Space> <C-e>
 nmap <C-@> <C-y>
 
+" Use J and K for tab switching:
+nmap K gt
+nmap J gT
+
 
 " PLUGIN SETTINGS:
 
