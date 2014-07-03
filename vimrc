@@ -116,6 +116,9 @@ let g:tslime['session'] = 'home'
 let g:tslime['window'] = 'editor'
 let g:tslime['pane'] = 1
 
+" NERDTree:
+let NERDTreeShowLineNumbers=1
+
 " SCRIPTS:
 
 " Remove trailing whitespace:
