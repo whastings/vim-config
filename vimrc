@@ -86,9 +86,18 @@ nmap <c-q> :q<CR>
 nmap <Space> <C-e>
 nmap <C-@> <C-y>
 
-" Use J and K for tab switching:
-nmap K gt
-nmap J gT
+" Use J and K for pane switching.
+nmap J <C-w>h
+nmap K <C-w>l
+let NERDTreeMapJumpLastChild='\j'
+let NERDTreeMapJumpFirstChild='\k'
+
+
+" Use ctrl + j and ctrl + k for tab switching.
+nmap <C-j> gT
+nmap <C-k> gt
+let NERDTreeMapJumpNextSibling='\j'
+let NERDTreeMapJumpPrevSibling='\k'
 
 
 " PLUGIN SETTINGS:
