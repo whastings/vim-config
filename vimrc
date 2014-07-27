@@ -26,6 +26,8 @@ call vundle#begin()
   Plugin 'matze/vim-move'
   Plugin 'tpope/vim-endwise'
   Plugin 'tpope/vim-surround'
+  Plugin 'jistr/vim-nerdtree-tabs'
+  Plugin 'hail2u/vim-css3-syntax'
 call vundle#end()
 filetype plugin indent on
 syntax on
@@ -64,7 +66,7 @@ imap <C-e> <esc>$i<right>
 imap <C-a> <esc>0i
 
 set pastetoggle=<F2>
-map <C-t> :NERDTreeToggle<CR>
+map <C-t> :NERDTreeTabsToggle<CR>
 map <C-h> :set hls!<CR> " Toggle search result highlighting.
 map C \c " Map just C to comment toggle.
 nmap <C-l> :TagbarToggle<CR>
