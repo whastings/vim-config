@@ -28,6 +28,7 @@ call vundle#begin()
   Plugin 'tpope/vim-surround'
   Plugin 'jistr/vim-nerdtree-tabs'
   Plugin 'hail2u/vim-css3-syntax'
+  Plugin 'elzr/vim-json'
 call vundle#end()
 filetype plugin indent on
 syntax on
