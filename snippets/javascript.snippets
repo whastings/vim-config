@@ -17,7 +17,7 @@ snippet typeof
 snippet makearray
 	Array.prototype.slice.call(${1:arguments}, 0);
 snippet strict
-	"use strict";
+	'use strict';
 snippet iife
 	(function(${1}) {
 	  "use strict";
@@ -31,6 +31,16 @@ snippet mexp
 	module.exports
 snippet exp
 	exports
+snippet grunt
+	module.exports = function(grunt) {
+	  'use strict';
+	  grunt.initConfig({
+	    ${1}
+	  });
+
+	  grunt.loadNpmTasks('');
+	  grunt.registerTask('', ['']);
+	};
 # Jasmine Snippets:
 snippet describe
 	describe('${1:feature}', function() {
