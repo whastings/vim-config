@@ -104,7 +104,6 @@ let NERDTreeMapJumpNextSibling='\j'
 let NERDTreeMapJumpPrevSibling='\k'
 
 " SnipMate shortcuts:
-imap <Tab> <Plug>snipMateTrigger
 imap <C-n> <Plug>snipMateNextOrTrigger
 
 
