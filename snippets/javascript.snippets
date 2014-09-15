@@ -20,7 +20,7 @@ snippet strict
 	'use strict';
 snippet iife
 	(function(${1}) {
-	  "use strict";
+	  'use strict';
 	  ${3}
 	})(${2});
 snippet while
@@ -41,6 +41,12 @@ snippet grunt
 	  grunt.loadNpmTasks('');
 	  grunt.registerTask('', ['']);
 	};
+snippet byId
+	document.getElementById('${1}')
+snippet byClass
+	document.getElementsByClassName('${1}')
+snippet byTag
+	document.getElementsByTagName('${1}')
 # Jasmine Snippets:
 snippet describe
 	describe('${1:feature}', function() {
