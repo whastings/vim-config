@@ -68,7 +68,7 @@ imap <C-e> <esc>$i<right>
 imap <C-a> <esc>0i
 
 set pastetoggle=<F2>
-map <C-t> :NERDTreeTabsToggle<CR>
+map <C-t> :NERDTreeTabsToggle<CR><C-n>
 map <C-h> :set hls!<CR> " Toggle search result highlighting.
 map C \c " Map just C to comment toggle.
 nmap <C-l> :TagbarToggle<CR>
