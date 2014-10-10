@@ -30,6 +30,7 @@ call vundle#begin()
   Plugin 'hail2u/vim-css3-syntax'
   Plugin 'elzr/vim-json'
   Plugin 'kchmck/vim-coffee-script'
+  Plugin 'Raimondi/delimitMate'
 call vundle#end()
 filetype plugin indent on
 syntax on
