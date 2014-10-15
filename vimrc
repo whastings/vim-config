@@ -108,6 +108,10 @@ let NERDTreeMapJumpPrevSibling='\k'
 " SnipMate shortcuts:
 imap <C-n> <Plug>snipMateNextOrTrigger
 
+" Pane resizing:
+nmap <C-Right> :vertical resize +2<CR>
+nmap <C-Left> :vertical resize -2<CR>
+
 
 " PLUGIN SETTINGS:
 
