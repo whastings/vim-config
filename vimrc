@@ -31,6 +31,7 @@ call vundle#begin()
   Plugin 'elzr/vim-json'
   Plugin 'kchmck/vim-coffee-script'
   Plugin 'Raimondi/delimitMate'
+  Plugin 'marijnh/tern_for_vim'
 call vundle#end()
 filetype plugin indent on
 syntax on
@@ -51,6 +52,9 @@ set colorcolumn=80 " Add a ruler.
 set laststatus=2 " Always show status line.
 set tags=./.ctags; " Source for ctags tags.
 :ino <C-C> <Esc> " Ensure ctrl + c triggers insertleave event.
+" Show invisible files:
+set listchars=tab:>-,extends:>,precedes:<
+set list
 
 
 " COLORS:
