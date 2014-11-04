@@ -52,6 +52,8 @@ set colorcolumn=80 " Add a ruler.
 set laststatus=2 " Always show status line.
 set tags=./.ctags; " Source for ctags tags.
 :ino <C-C> <Esc> " Ensure ctrl + c triggers insertleave event.
+set foldmethod=indent " Enable code-folding
+au BufRead * normal zR " Have all code-folds open by default.
 " Show invisible files:
 set listchars=tab:>-,extends:>,precedes:<
 set list
