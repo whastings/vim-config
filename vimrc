@@ -54,6 +54,7 @@ set tags=./.ctags; " Source for ctags tags.
 :ino <C-C> <Esc> " Ensure ctrl + c triggers insertleave event.
 set foldmethod=indent " Enable code-folding
 au BufRead * normal zR " Have all code-folds open by default.
+set cursorline
 " Show invisible files:
 set listchars=tab:>-,extends:>,precedes:<
 set list
@@ -107,7 +108,6 @@ nmap K <C-w>l
 let NERDTreeMapJumpLastChild='\j'
 let NERDTreeMapJumpFirstChild='\k'
 
-
 " Use ctrl + j and ctrl + k for tab switching.
 nmap <C-j> gT
 nmap <C-k> gt
@@ -120,6 +120,9 @@ imap <C-n> <Plug>snipMateNextOrTrigger
 " Pane resizing:
 nmap <C-Right> :vertical resize +2<CR>
 nmap <C-Left> :vertical resize -2<CR>
+
+" Use f for toggling code-folds open and closed.
+nmap f za
 
 
 " PLUGIN SETTINGS:
