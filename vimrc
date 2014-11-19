@@ -32,6 +32,7 @@ call vundle#begin()
   Plugin 'kchmck/vim-coffee-script'
   Plugin 'Raimondi/delimitMate'
   Plugin 'marijnh/tern_for_vim'
+  Plugin 'tpope/vim-unimpaired'
 call vundle#end()
 filetype plugin indent on
 syntax on
@@ -124,6 +125,8 @@ nmap <C-Left> :vertical resize -2<CR>
 " Use f for toggling code-folds open and closed.
 nmap f za
 
+" Visually select the text that was last edited/pasted.
+nmap gV `[v`]`
 
 " PLUGIN SETTINGS:
 
