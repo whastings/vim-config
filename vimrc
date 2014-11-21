@@ -59,6 +59,7 @@ set cursorline
 " Show invisible files:
 set listchars=tab:>-,extends:>,precedes:<
 set list
+set iskeyword+=- " Don't treat dashes as word separators.
 
 
 " COLORS:
