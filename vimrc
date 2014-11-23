@@ -33,6 +33,7 @@ call vundle#begin()
   Plugin 'Raimondi/delimitMate'
   Plugin 'marijnh/tern_for_vim'
   Plugin 'tpope/vim-unimpaired'
+  Plugin 'jlanzarotta/bufexplorer'
 call vundle#end()
 filetype plugin indent on
 syntax on
@@ -128,6 +129,10 @@ nmap f za
 
 " Visually select the text that was last edited/pasted.
 nmap gV `[v`]`
+
+" Truly delete (write to blackhole register).
+nmap <Leader>d "_d
+
 
 " PLUGIN SETTINGS:
 
