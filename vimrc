@@ -133,6 +133,10 @@ nmap gV `[v`]`
 " Truly delete (write to blackhole register).
 nmap <Leader>d "_d
 
+" Moving tabs:
+nmap <Right> :execute "tabmove" tabpagenr() <CR>
+nmap <Left> :execute "tabmove" tabpagenr() - 2 <CR>
+
 
 " PLUGIN SETTINGS:
 
