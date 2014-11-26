@@ -4,7 +4,6 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-  Plugin 'kien/ctrlp.vim'
   Plugin 'mattn/emmet-vim'
   Plugin 'gregsexton/MatchTag'
   Plugin 'scrooloose/nerdcommenter'
@@ -34,6 +33,8 @@ call vundle#begin()
   Plugin 'marijnh/tern_for_vim'
   Plugin 'tpope/vim-unimpaired'
   Plugin 'jlanzarotta/bufexplorer'
+  Plugin 'Shougo/vimproc.vim'
+  Plugin 'Shougo/unite.vim'
 call vundle#end()
 filetype plugin indent on
 syntax on
@@ -137,6 +138,8 @@ nmap <Leader>d "_d
 nmap <Right> :execute "tabmove" tabpagenr() <CR>
 nmap <Left> :execute "tabmove" tabpagenr() - 2 <CR>
 
+" Open Unite for file search:
+nnoremap <C-p> :Unite file_rec/async<CR>i
 
 " PLUGIN SETTINGS:
 
