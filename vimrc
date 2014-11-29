@@ -139,7 +139,9 @@ nmap <Right> :execute "tabmove" tabpagenr() <CR>
 nmap <Left> :execute "tabmove" tabpagenr() - 2 <CR>
 
 " Open Unite for file search:
-nnoremap <C-p> :Unite file_rec/async<CR>i
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <C-p> :<C-u>Unite -start-insert file_rec/async:!<CR>
+
 
 " PLUGIN SETTINGS:
 
@@ -159,6 +161,16 @@ let g:tslime['pane'] = 1
 
 " NERDTree:
 let NERDTreeShowLineNumbers=1
+
+" Unite:
+autocmd FileType unite call s:unite_my_settings()
+function! s:unite_my_settings()"{{{
+  " Runs "split" action by <C-v>.
+  nmap <silent><buffer><expr> <C-v>     unite#do_action('vsplit')
+  " Runs "tabopen" action by <C-t>.
+  nmap <silent><buffer><expr> <C-t>     unite#do_action('tabopen')
+endfunction"}}}
+let g:unite_source_file_rec_max_cache_files = 20000
 
 " SCRIPTS:
 
