@@ -142,6 +142,10 @@ nmap <Left> :execute "tabmove" tabpagenr() - 2 <CR>
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 nnoremap <C-p> :<C-u>Unite -start-insert file_rec/async:!<CR>
 
+" CUSTOM COMMANDS:
+command SC setlocal spell spelllang=en_us " Enable spell check.
+command SCO setlocal nospell " Disable spell check.
+
 
 " PLUGIN SETTINGS:
 
