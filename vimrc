@@ -35,6 +35,7 @@ call vundle#begin()
   Plugin 'jlanzarotta/bufexplorer'
   Plugin 'Shougo/vimproc.vim'
   Plugin 'Shougo/unite.vim'
+  Plugin 'derekwyatt/vim-scala'
 call vundle#end()
 filetype plugin indent on
 syntax on
