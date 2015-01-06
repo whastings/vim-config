@@ -63,6 +63,7 @@ set cursorline
 set listchars=tab:>-,extends:>,precedes:<
 set list
 set iskeyword+=- " Don't treat dashes as word separators.
+set hidden " Allow unsaved hidden buffers.
 
 
 " COLORS:
