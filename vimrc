@@ -56,7 +56,8 @@ set colorcolumn=80 " Add a ruler.
 set laststatus=2 " Always show status line.
 set tags=./.ctags; " Source for ctags tags.
 :ino <C-C> <Esc> " Ensure ctrl + c triggers insertleave event.
-set foldmethod=indent " Enable code-folding
+set foldmethod=syntax " Enable code-folding
+set foldlevelstart=1
 au BufRead * normal zR " Have all code-folds open by default.
 set cursorline
 " Show invisible files:
@@ -200,6 +201,7 @@ autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
 autocmd BufNewFile,BufRead *.hbs set filetype=html
 autocmd BufNewFile,BufRead *.jst.ejs set filetype=html
 autocmd BufNewFile,BufRead *.ejs set filetype=html
+autocmd FileType javascript call JavaScriptFold()
 augroup markdown
     au!
     au BufNewFile,BufRead *.md,*.markdown setlocal filetype=markdown
