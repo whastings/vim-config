@@ -65,6 +65,10 @@ set listchars=tab:>-,extends:>,precedes:<
 set list
 set iskeyword+=- " Don't treat dashes as word separators.
 set hidden " Allow unsaved hidden buffers.
+" Always use 'very magic mode' for regexes:
+nnoremap / /\v
+vnoremap / /\v
+cnoremap %s/ %smagic/
 
 
 " COLORS:
