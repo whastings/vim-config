@@ -182,6 +182,7 @@ function! s:unite_my_settings()"{{{
   nmap <silent><buffer><expr> <C-t>     unite#do_action('tabopen')
 endfunction"}}}
 let g:unite_source_file_rec_max_cache_files = 20000
+call unite#custom#source('file_rec/async', 'ignore_pattern', 'node_modules/\|bower_components/\|tmp')
 
 " SCRIPTS:
 
