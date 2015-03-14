@@ -22,7 +22,6 @@ call vundle#begin()
   Plugin 'jgdavey/tslime.vim'
   Plugin 'tomtom/tlib_vim' " For vim-snipmate.
   Plugin 'MarcWeber/vim-addon-mw-utils' " For vim-snipmate.
-  Plugin 'matze/vim-move'
   Plugin 'tpope/vim-endwise'
   Plugin 'tpope/vim-surround'
   Plugin 'jistr/vim-nerdtree-tabs'
