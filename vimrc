@@ -147,6 +147,10 @@ nmap <Left> :execute "tabmove" tabpagenr() - 2 <CR>
 " ctrl-p:
 nmap <C-b> :CtrlPMRU<cr>
 
+" Find & replace
+nmap R :%smagic/
+vmap R :s/
+
 
 " CUSTOM COMMANDS:
 command SC setlocal spell spelllang=en_us " Enable spell check.
