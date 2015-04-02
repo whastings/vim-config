@@ -33,7 +33,7 @@ call vundle#begin()
   Plugin 'tpope/vim-unimpaired'
   Plugin 'jlanzarotta/bufexplorer'
   Plugin 'Shougo/vimproc.vim'
-  Plugin 'Shougo/unite.vim'
+  Plugin 'kien/ctrlp.vim'
   Plugin 'derekwyatt/vim-scala'
 call vundle#end()
 filetype plugin indent on
@@ -144,9 +144,9 @@ nmap <Leader>d "_d
 nmap <Right> :execute "tabmove" tabpagenr() <CR>
 nmap <Left> :execute "tabmove" tabpagenr() - 2 <CR>
 
-" Open Unite for file search:
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap <C-p> :<C-u>Unite -start-insert file_rec/async:!<CR>
+" ctrl-p:
+nmap <C-b> :CtrlPMRU<cr>
+
 
 " CUSTOM COMMANDS:
 command SC setlocal spell spelllang=en_us " Enable spell check.
@@ -172,16 +172,13 @@ let g:tslime['pane'] = 1
 " NERDTree:
 let NERDTreeShowLineNumbers=1
 
-" Unite:
-autocmd FileType unite call s:unite_my_settings()
-function! s:unite_my_settings()"{{{
-  " Runs "split" action by <C-v>.
-  nmap <silent><buffer><expr> <C-v>     unite#do_action('vsplit')
-  " Runs "tabopen" action by <C-t>.
-  nmap <silent><buffer><expr> <C-t>     unite#do_action('tabopen')
-endfunction"}}}
-let g:unite_source_file_rec_max_cache_files = 20000
-call unite#custom#source('file_rec/async', 'ignore_pattern', 'node_modules/\|bower_components/\|tmp')
+" ctrl-p:
+let g:ctrlp_working_path_mode = 'r' " Use nearest .git as cwd
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|node_modules|bower_components)$',
+  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
+\}
+
 
 " SCRIPTS:
 
