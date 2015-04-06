@@ -11,14 +11,12 @@ call vundle#begin()
   Plugin 'garbas/vim-snipmate'
   Plugin 'ervandew/supertab'
   Plugin 'scrooloose/syntastic'
-  Plugin 'jgdavey/vim-blockle'
   Plugin 'jelera/vim-javascript-syntax'
   Plugin 'tpope/vim-markdown'
   Plugin 'jeffkreeftmeijer/vim-numbertoggle'
   Plugin 'honza/vim-snippets'
   Plugin 'gmarik/Vundle.vim'
   Plugin 'majutsushi/tagbar'
-  Plugin 'sukima/xmledit'
   Plugin 'jgdavey/tslime.vim'
   Plugin 'tomtom/tlib_vim' " For vim-snipmate.
   Plugin 'MarcWeber/vim-addon-mw-utils' " For vim-snipmate.
@@ -32,14 +30,14 @@ call vundle#begin()
   Plugin 'marijnh/tern_for_vim'
   Plugin 'tpope/vim-unimpaired'
   Plugin 'jlanzarotta/bufexplorer'
-  Plugin 'Shougo/vimproc.vim'
   Plugin 'kien/ctrlp.vim'
   Plugin 'derekwyatt/vim-scala'
+  Plugin 'bkad/CamelCaseMotion'
+  Plugin 'bling/vim-airline'
+  Plugin 'osyo-manga/vim-over'
 call vundle#end()
 filetype plugin indent on
 syntax on
-" Load powerline.
-set rtp+=~/dot-files/vendor/powerline/powerline/bindings/vim
 
 
 " SETTINGS:
@@ -51,9 +49,12 @@ set autoindent
 set number " Show line numbers.
 set splitbelow
 set splitright
+set backspace=indent,eol,start
+set incsearch
 set colorcolumn=80 " Add a ruler.
 set laststatus=2 " Always show status line.
 set tags=./.ctags; " Source for ctags tags.
+set laststatus=2 " Always show status line."
 :ino <C-C> <Esc> " Ensure ctrl + c triggers insertleave event.
 set foldmethod=syntax " Enable code-folding
 set foldlevelstart=1
@@ -67,7 +68,6 @@ set hidden " Allow unsaved hidden buffers.
 " Always use 'very magic mode' for regexes:
 nnoremap / /\v
 vnoremap / /\v
-cnoremap %s/ %smagic/
 
 
 " COLORS:
@@ -128,8 +128,8 @@ let NERDTreeMapJumpPrevSibling='\k'
 imap <C-n> <Plug>snipMateNextOrTrigger
 
 " Pane resizing:
-nmap <C-Right> :vertical resize +2<CR>
-nmap <C-Left> :vertical resize -2<CR>
+nnoremap <C-Right> :vertical resize +2<CR>
+nnoremap <C-Left> :vertical resize -2<CR>
 
 " Use f for toggling code-folds open and closed.
 nmap f za
@@ -148,8 +148,8 @@ nmap <Left> :execute "tabmove" tabpagenr() - 2 <CR>
 nmap <C-b> :CtrlPMRU<cr>
 
 " Find & replace
-nmap R :%smagic/
-vmap R :s/
+nmap R :call VisualFindAndReplace()<CR>
+vmap R :call VisualFindAndReplaceWithSelection()<CR>
 
 
 " CUSTOM COMMANDS:
@@ -179,7 +179,7 @@ let NERDTreeShowLineNumbers=1
 " ctrl-p:
 let g:ctrlp_working_path_mode = 'r' " Use nearest .git as cwd
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|node_modules|bower_components)$',
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|node_modules|bower_components|tmp)$',
   \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
 \}
 
@@ -196,6 +196,16 @@ while c <= 'z'
   exec "imap \e".c." <A-".c.">"
   let c = nr2char(1+char2nr(c))
 endw
+
+" Borrowed from https://github.com/toranb/dotfiles
+function! VisualFindAndReplace()
+    :OverCommandLine%s/
+    :w
+endfunction
+function! VisualFindAndReplaceWithSelection() range
+    :'<,'>OverCommandLine s/
+    :w
+endfunction
 
 
 " FILETYPES:
