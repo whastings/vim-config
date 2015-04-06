@@ -11,7 +11,7 @@ call vundle#begin()
   Plugin 'garbas/vim-snipmate'
   Plugin 'ervandew/supertab'
   Plugin 'scrooloose/syntastic'
-  Plugin 'jelera/vim-javascript-syntax'
+  Plugin 'pangloss/vim-javascript'
   Plugin 'tpope/vim-markdown'
   Plugin 'jeffkreeftmeijer/vim-numbertoggle'
   Plugin 'honza/vim-snippets'
@@ -96,10 +96,10 @@ nnoremap ;; :s/\v(.)$/\=submatch(1)==';' ? '' : submatch(1).';'<CR>
 
 " Edit another file in the same directory as the current file
 " uses expression to extract path from current file's path
-map <Leader>e :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR><CR><CR><C-n>
-map <Leader>s :split <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR><CR><CR><C-n>
-map <Leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR><CR><CR><C-n>
-map <Leader>t :tabe <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR><CR><CR><C-n>
+map <Leader>e :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR><CR><CR>
+map <Leader>s :split <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR><CR><CR>
+map <Leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR><CR><CR>
+map <Leader>t :tabe <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR><CR><CR>
 
 " Have adjacent Tmux pane cd to current Vim directory.
 map <Leader>T :call Send_to_Tmux("cd " . escape(expand('%:p:h'), ' ') . "\n")<CR>
@@ -216,7 +216,6 @@ autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
 autocmd BufNewFile,BufRead *.hbs set filetype=html
 autocmd BufNewFile,BufRead *.jst.ejs set filetype=html
 autocmd BufNewFile,BufRead *.ejs set filetype=html
-autocmd FileType javascript call JavaScriptFold()
 augroup markdown
     au!
     au BufNewFile,BufRead *.md,*.markdown setlocal filetype=markdown
