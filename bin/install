@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+VIM_DIR=$HOME/.vim
+BUNDLE_DIR=$VIM_DIR/bundle
+
+# Symlink Vim config.
+ln -s -f $VIM_DIR/vimrc $HOME/.vimrc
+
+# Install Plugins
+mkdir $BUNDLE_DIR
+git clone https://github.com/gmarik/Vundle.vim.git $BUNDLE_DIR/Vundle.vim
+vim +PluginInstall +qall
