@@ -5,7 +5,6 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
   Plugin 'mattn/emmet-vim'
-  Plugin 'gregsexton/MatchTag'
   Plugin 'scrooloose/nerdcommenter'
   Plugin 'scrooloose/nerdtree'
   Plugin 'garbas/vim-snipmate'
@@ -35,6 +34,7 @@ call vundle#begin()
   Plugin 'bkad/CamelCaseMotion'
   Plugin 'bling/vim-airline'
   Plugin 'osyo-manga/vim-over'
+  Plugin 'nathanaelkane/vim-indent-guides'
 call vundle#end()
 filetype plugin indent on
 syntax on
@@ -64,6 +64,7 @@ set cursorline
 set listchars=tab:>-,extends:>,precedes:<
 set list
 set iskeyword+=- " Don't treat dashes as word separators.
+set iskeyword+=$ " Keep $ as part of word.
 set hidden " Allow unsaved hidden buffers.
 " Always use 'very magic mode' for regexes:
 nnoremap / /\v
