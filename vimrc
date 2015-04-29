@@ -66,9 +66,9 @@ set list
 set iskeyword+=- " Don't treat dashes as word separators.
 set iskeyword+=$ " Keep $ as part of word.
 set hidden " Allow unsaved hidden buffers.
-" Always use 'very magic mode' for regexes:
-nnoremap / /\v
-vnoremap / /\v
+" Always use 'very magic mode' and case-insensitive for regexes:
+nnoremap / /\v\c
+vnoremap / /\v\c
 
 
 " COLORS:
