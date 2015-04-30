@@ -86,6 +86,10 @@ imap <C-e> <esc>$i<right>
 " map CTRL-A to beginning-of-line (insert mode)
 imap <C-a> <esc>0i
 
+" Use CTRL-h and CTRL-l to move horizontally in insert mode.
+imap <C-h> <Left>
+imap <C-l> <Right>
+
 set pastetoggle=<F2>
 map <C-t> :NERDTreeTabsToggle<CR><C-n>
 map <C-h> :set hls!<CR> " Toggle search result highlighting.
