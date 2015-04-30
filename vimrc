@@ -188,6 +188,9 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
 \}
 
+" vim-json:
+let g:vim_json_syntax_conceal = 0 " Don't hide key quotes.
+
 
 " SCRIPTS:
 
