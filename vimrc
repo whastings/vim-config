@@ -187,6 +187,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](\.(git|hg|svn)|node_modules|bower_components|tmp)$',
   \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
 \}
+let g:ctrlp_root_markers = ['.ctrlp_stop']
 
 " vim-json:
 let g:vim_json_syntax_conceal = 0 " Don't hide key quotes.
