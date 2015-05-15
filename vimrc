@@ -35,6 +35,7 @@ call vundle#begin()
   Plugin 'bling/vim-airline'
   Plugin 'osyo-manga/vim-over'
   Plugin 'nathanaelkane/vim-indent-guides'
+  Plugin 'mxw/vim-jsx'
 call vundle#end()
 filetype plugin indent on
 syntax on
@@ -155,6 +156,10 @@ nmap <C-b> :CtrlPMRU<cr>
 " Find & replace
 nmap R :call VisualFindAndReplace()<CR>
 vmap R :call VisualFindAndReplaceWithSelection()<CR>
+
+" Command mode up & down:
+cmap <C-k> <Up>
+cmap <C-j> <Down>
 
 
 " CUSTOM COMMANDS:
