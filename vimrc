@@ -171,6 +171,7 @@ command SCO setlocal nospell " Disable spell check.
 
 " Syntastic:
 let g:syntastic_check_on_open = 1
+let g:syntastic_javascript_checkers = ['eslint']
 
 " Emmet:
 let g:user_emmet_install_global = 0
