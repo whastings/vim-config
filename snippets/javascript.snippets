@@ -91,6 +91,20 @@ snippet cl
 	console.log(${0});
 snippet =
 	=== ${1}
+snippet umd
+	(function(root, factory) {
+	  if (typeof define === 'function' && define.amd) {
+	    define([], factory);
+	  } else if (typeof exports === 'object') {
+	    module.exports = factory();
+	  } else {
+	    root.X = factory();
+	  }
+	}(this, function () {
+	  var X;
+	  
+	  return X;
+	}));
 # NODE:
 snippet mexp
 	module.exports
