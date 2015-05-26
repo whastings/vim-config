@@ -76,7 +76,7 @@ set dir=~/tmp " Use tmp directory for swap files.
 " COLORS:
 
 colorscheme darkBlue
-highlight ColorColumn ctermbg=lightgrey " Make column gray.
+highlight ColorColumn ctermbg=darkgrey " Make column gray.
 highlight Comment term=bold ctermfg=lightblue
 
 
