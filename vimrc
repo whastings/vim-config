@@ -70,6 +70,7 @@ set hidden " Allow unsaved hidden buffers.
 " Always use 'very magic mode' and case-insensitive for regexes:
 nnoremap / /\v\c
 vnoremap / /\v\c
+set dir=~/tmp " Use tmp directory for swap files.
 
 
 " COLORS:
