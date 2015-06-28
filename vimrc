@@ -36,6 +36,7 @@ call vundle#begin()
   Plugin 'osyo-manga/vim-over'
   Plugin 'nathanaelkane/vim-indent-guides'
   Plugin 'mxw/vim-jsx'
+  Plugin 'editorconfig/editorconfig-vim'
 call vundle#end()
 filetype plugin indent on
 syntax on
