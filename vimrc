@@ -38,6 +38,8 @@ call vundle#begin()
   Plugin 'mxw/vim-jsx'
   Plugin 'editorconfig/editorconfig-vim'
   Plugin 'jimmyhchan/dustjs.vim'
+  Plugin 'gregsexton/MatchTag'
+  Plugin 'othree/xml.vim'
 call vundle#end()
 filetype plugin indent on
 syntax on
@@ -201,6 +203,9 @@ let g:ctrlp_root_markers = ['.ctrlp_stop']
 
 " vim-json:
 let g:vim_json_syntax_conceal = 0 " Don't hide key quotes.
+
+" delimitMate:
+au FileType html let b:delimitMate_matchpairs = '(:),[:],{:}' " No <> in HTML.
 
 
 " SCRIPTS:
