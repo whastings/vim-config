@@ -190,6 +190,11 @@ let g:tslime['session'] = 'home'
 let g:tslime['window'] = 'editor'
 let g:tslime['pane'] = 1
 
+" NERDCommenter:
+let g:NERDCustomDelimiters = {
+  \ 'scss': { 'left': '// ' }
+\ }
+
 " NERDTree:
 let NERDTreeShowLineNumbers=1
 
