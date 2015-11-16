@@ -210,7 +210,9 @@ let g:ctrlp_root_markers = ['.ctrlp_stop']
 let g:vim_json_syntax_conceal = 0 " Don't hide key quotes.
 
 " delimitMate:
-au FileType html let b:delimitMate_matchpairs = '(:),[:],{:}' " No <> in HTML.
+let delimitMate_matchpairs_custom = '(:),[:],{:}' " No <> in HTML.
+au FileType html let b:delimitMate_matchpairs = delimitMate_matchpairs_custom
+au FileType javascript.jsx let b:delimitMate_matchpairs = delimitMate_matchpairs_custom
 
 
 " SCRIPTS:
