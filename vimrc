@@ -139,8 +139,10 @@ let NERDTreeMapJumpPrevSibling='\k'
 imap <C-n> <Plug>snipMateNextOrTrigger
 
 " Pane resizing:
-nnoremap <C-Right> :vertical resize +2<CR>
-nnoremap <C-Left> :vertical resize -2<CR>
+nnoremap <Left> :vertical resize +2<CR>
+nnoremap <Right> :vertical resize -2<CR>
+nnoremap <Up> :resize +2<CR>
+nnoremap <Down> :resize -2<CR>
 
 " Use f for toggling code-folds open and closed.
 nmap f za
@@ -152,8 +154,8 @@ nmap gV `[v`]`
 nmap <Leader>d "_d
 
 " Moving tabs:
-nmap <Right> :execute "tabmove" tabpagenr() <CR>
-nmap <Left> :execute "tabmove" tabpagenr() - 2 <CR>
+nmap <C-Up> :execute "tabmove" tabpagenr() <CR>
+nmap <C-Down> :execute "tabmove" tabpagenr() - 2 <CR>
 
 " ctrl-p:
 nmap <C-b> :CtrlPMRU<cr>
