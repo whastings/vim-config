@@ -40,6 +40,7 @@ call vundle#begin()
   Plugin 'jimmyhchan/dustjs.vim'
   Plugin 'gregsexton/MatchTag'
   Plugin 'othree/xml.vim'
+  Plugin 'mustache/vim-mustache-handlebars'
 call vundle#end()
 filetype plugin indent on
 syntax on
@@ -214,6 +215,7 @@ let g:vim_json_syntax_conceal = 0 " Don't hide key quotes.
 " delimitMate:
 let delimitMate_matchpairs_custom = '(:),[:],{:}' " No <> in HTML.
 au FileType html let b:delimitMate_matchpairs = delimitMate_matchpairs_custom
+au FileType html.handlebars let b:delimitMate_matchpairs = delimitMate_matchpairs_custom
 au FileType javascript.jsx let b:delimitMate_matchpairs = delimitMate_matchpairs_custom
 
 
@@ -246,7 +248,6 @@ endfunction
 autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
 autocmd BufNewFile,BufRead *.json.jbuilder set filetype=ruby
 autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
-autocmd BufNewFile,BufRead *.hbs set filetype=html
 autocmd BufNewFile,BufRead *.jst.ejs set filetype=html
 autocmd BufNewFile,BufRead *.ejs set filetype=html
 augroup markdown
