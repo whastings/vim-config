@@ -76,6 +76,7 @@ set hidden " Allow unsaved hidden buffers.
 nnoremap / /\v\c
 vnoremap / /\v\c
 set dir=~/tmp " Use tmp directory for swap files.
+set sessionoptions=buffers,curdir,resize,tabpages,winpos,winsize
 
 
 " COLORS:
@@ -168,6 +169,10 @@ vmap R :call VisualFindAndReplaceWithSelection()<CR>
 " Command mode up & down:
 cmap <C-k> <Up>
 cmap <C-j> <Down>
+
+" Save and reopen session:
+nmap <Leader>s :mksession! ~/.vim_session <cr>
+nmap <Leader>r :source ~/.vim_session <cr>
 
 
 " CUSTOM COMMANDS:
