@@ -174,6 +174,11 @@ cmap <C-j> <Down>
 nmap <Leader>s :mksession! ~/.vim_session <cr>
 nmap <Leader>r :source ~/.vim_session <cr>
 
+" Camel-case motion:
+nmap <silent> W <Plug>CamelCaseMotion_w
+nmap <silent> B <Plug>CamelCaseMotion_b
+nmap <silent> E <Plug>CamelCaseMotion_e
+
 
 " CUSTOM COMMANDS:
 command SC setlocal spell spelllang=en_us " Enable spell check.
