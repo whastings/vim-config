@@ -156,8 +156,8 @@ nmap gV `[v`]`
 nmap <Leader>d "_d
 
 " Moving tabs:
-nmap <C-Up> :execute "tabmove" tabpagenr() <CR>
-nmap <C-Down> :execute "tabmove" tabpagenr() - 2 <CR>
+nmap <Leader>l :execute "tabmove" tabpagenr() <CR>
+nmap <Leader>h :execute "tabmove" tabpagenr() - 2 <CR>
 
 " ctrl-p:
 nmap <C-b> :CtrlPMRU<cr>
