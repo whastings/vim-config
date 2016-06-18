@@ -13,7 +13,6 @@ call vundle#begin()
   Plugin 'pangloss/vim-javascript'
   Plugin 'tpope/vim-markdown'
   Plugin 'jeffkreeftmeijer/vim-numbertoggle'
-  Plugin 'honza/vim-snippets'
   Plugin 'gmarik/Vundle.vim'
   Plugin 'majutsushi/tagbar'
   Plugin 'jgdavey/tslime.vim'
