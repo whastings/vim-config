@@ -170,8 +170,8 @@ cmap <C-k> <Up>
 cmap <C-j> <Down>
 
 " Save and reopen session:
-nmap <Leader>s :mksession! ~/.vim_session <cr>
-nmap <Leader>r :source ~/.vim_session <cr>
+nmap <Leader>m :mksession! ~/.vim_session <cr>
+nmap <Leader>M :source ~/.vim_session <cr>
 
 " Camel-case motion:
 nmap <silent> W <Plug>CamelCaseMotion_w
@@ -226,6 +226,10 @@ let delimitMate_matchpairs_custom = '(:),[:],{:}' " No <> in HTML.
 au FileType html let b:delimitMate_matchpairs = delimitMate_matchpairs_custom
 au FileType html.handlebars let b:delimitMate_matchpairs = delimitMate_matchpairs_custom
 au FileType javascript.jsx let b:delimitMate_matchpairs = delimitMate_matchpairs_custom
+
+" Supertab
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
 
 " SCRIPTS:
