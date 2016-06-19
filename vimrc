@@ -15,28 +15,22 @@ call vundle#begin()
   Plugin 'jeffkreeftmeijer/vim-numbertoggle'
   Plugin 'gmarik/Vundle.vim'
   Plugin 'majutsushi/tagbar'
-  Plugin 'jgdavey/tslime.vim'
   Plugin 'tomtom/tlib_vim' " For vim-snipmate.
   Plugin 'MarcWeber/vim-addon-mw-utils' " For vim-snipmate.
-  Plugin 'tpope/vim-endwise'
   Plugin 'tpope/vim-surround'
   Plugin 'jistr/vim-nerdtree-tabs'
   Plugin 'hail2u/vim-css3-syntax'
   Plugin 'elzr/vim-json'
-  Plugin 'kchmck/vim-coffee-script'
   Plugin 'Raimondi/delimitMate'
   Plugin 'marijnh/tern_for_vim'
   Plugin 'tpope/vim-unimpaired'
   Plugin 'jlanzarotta/bufexplorer'
   Plugin 'kien/ctrlp.vim'
-  Plugin 'derekwyatt/vim-scala'
   Plugin 'bkad/CamelCaseMotion'
   Plugin 'bling/vim-airline'
   Plugin 'osyo-manga/vim-over'
-  Plugin 'nathanaelkane/vim-indent-guides'
   Plugin 'mxw/vim-jsx'
   Plugin 'editorconfig/editorconfig-vim'
-  Plugin 'jimmyhchan/dustjs.vim'
   Plugin 'gregsexton/MatchTag'
   Plugin 'othree/xml.vim'
   Plugin 'mustache/vim-mustache-handlebars'
@@ -181,6 +175,9 @@ nmap <Leader>M :source ~/.vim_session <cr>
 nmap <silent> W <Plug>CamelCaseMotion_w
 nmap <silent> B <Plug>CamelCaseMotion_b
 nmap <silent> E <Plug>CamelCaseMotion_e
+
+" Buffers:
+nmap <Leader>b :BufExplorer <cr>
 
 
 " CUSTOM COMMANDS:
