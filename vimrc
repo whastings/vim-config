@@ -40,6 +40,10 @@ call vundle#begin()
   Plugin 'gregsexton/MatchTag'
   Plugin 'othree/xml.vim'
   Plugin 'mustache/vim-mustache-handlebars'
+  " TypeScript
+  Plugin 'leafgarland/typescript-vim'
+  Plugin 'Shougo/vimproc.vim'
+  Plugin 'Quramy/tsuquyomi'
 call vundle#end()
 filetype plugin indent on
 syntax on
@@ -190,6 +194,7 @@ command SCO setlocal nospell " Disable spell check.
 let g:syntastic_check_on_open = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_html_checkers = [] " TODO: Find a good HTML linter.
+let g:syntastic_typescript_checkers = ['tsuquyomi']
 
 " Emmet:
 let g:user_emmet_install_global = 0
@@ -231,6 +236,9 @@ au FileType javascript.jsx let b:delimitMate_matchpairs = delimitMate_matchpairs
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
+" Tsuquyomi
+let g:tsuquyomi_disable_quickfix = 1
+let g:tsuquyomi_disable_default_mappings = 1
 
 " SCRIPTS:
 
