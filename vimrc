@@ -179,6 +179,9 @@ nmap <silent> E <Plug>CamelCaseMotion_e
 " Buffers:
 nmap <Leader>b :BufExplorer <cr>
 
+" Autocomplete:
+imap <C-p> <C-x><C-o>
+
 
 " CUSTOM COMMANDS:
 command SC setlocal spell spelllang=en_us " Enable spell check.
@@ -229,13 +232,10 @@ au FileType html let b:delimitMate_matchpairs = delimitMate_matchpairs_custom
 au FileType html.handlebars let b:delimitMate_matchpairs = delimitMate_matchpairs_custom
 au FileType javascript.jsx let b:delimitMate_matchpairs = delimitMate_matchpairs_custom
 
-" Supertab
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType = "<c-n>"
-
 " Tsuquyomi
 let g:tsuquyomi_disable_quickfix = 1
 let g:tsuquyomi_disable_default_mappings = 1
+
 
 " SCRIPTS:
 
