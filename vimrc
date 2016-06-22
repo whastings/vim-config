@@ -34,6 +34,7 @@ call vundle#begin()
   Plugin 'gregsexton/MatchTag'
   Plugin 'othree/xml.vim'
   Plugin 'mustache/vim-mustache-handlebars'
+  Plugin 'flowtype/vim-flow'
   " TypeScript
   Plugin 'leafgarland/typescript-vim'
   Plugin 'Shougo/vimproc.vim'
@@ -235,6 +236,20 @@ au FileType javascript.jsx let b:delimitMate_matchpairs = delimitMate_matchpairs
 " Tsuquyomi
 let g:tsuquyomi_disable_quickfix = 1
 let g:tsuquyomi_disable_default_mappings = 1
+
+" vim-flow
+function FlowOn()
+  let g:flow#enable = 1
+  let g:flow#omnifunc = 1
+  setl omnifunc=flowcomplete#Complete
+endfunction
+function FlowOff()
+  let g:flow#enable = 0
+  let g:flow#omnifunc = 0
+endfunction
+call FlowOff() " Off by default since the plugin runs on files without @flow
+command FlowOn call FlowOn()
+command FlowOff call FlowOff()
 
 
 " SCRIPTS:
