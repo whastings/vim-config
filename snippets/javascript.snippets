@@ -196,6 +196,11 @@ snippet ae
 	afterEach(function() {
 	  ${1}
 	});
+snippet qt
+	test('${1:description}', function(assert) {
+	  assert.expect();
+	  ${2}
+	});
 # DOCUMENTATION:
 snippet @param
 	@param {${1:type}} ${2:name} ${3:description}
