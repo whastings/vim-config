@@ -75,6 +75,7 @@ nnoremap / /\v\c
 vnoremap / /\v\c
 set dir=~/tmp " Use tmp directory for swap files.
 set sessionoptions=buffers,curdir,resize,tabpages,winpos,winsize
+set backupcopy=yes " Needed for file watchers like webpack-dev-server
 
 
 " COLORS:
