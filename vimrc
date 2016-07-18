@@ -60,9 +60,6 @@ set laststatus=2 " Always show status line.
 set tags=./.ctags; " Source for ctags tags.
 set laststatus=2 " Always show status line."
 :ino <C-C> <Esc> " Ensure ctrl + c triggers insertleave event.
-set foldmethod=syntax " Enable code-folding
-set foldlevelstart=1
-au BufRead * normal zR " Have all code-folds open by default.
 set cursorline
 " Show invisible files:
 set listchars=tab:>-,extends:>,precedes:<
@@ -76,6 +73,15 @@ vnoremap / /\v\c
 set dir=~/tmp " Use tmp directory for swap files.
 set sessionoptions=buffers,curdir,resize,tabpages,winpos,winsize
 set backupcopy=yes " Needed for file watchers like webpack-dev-server
+
+" Folding:
+" TODO: Re-enable when I figure out how to keep folds from closing when
+" revisiting a Buffer:
+"set foldmethod=syntax " Enable code-folding
+"set foldlevelstart=1
+"au BufRead * normal zR " Have all code-folds open by default.
+"autocmd InsertLeave,WinEnter,BufEnter * setlocal foldmethod=syntax
+"autocmd InsertEnter,WinLeave,BufLeave,BufHidden * setlocal foldmethod=manual
 
 
 " COLORS:
