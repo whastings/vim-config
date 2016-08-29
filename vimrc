@@ -222,6 +222,7 @@ let g:NERDCustomDelimiters = {
 
 " NERDTree:
 let NERDTreeShowLineNumbers=1
+let NERDTreeShowHidden=1
 
 " ctrl-p:
 let g:ctrlp_working_path_mode = 'r' " Use nearest .git as cwd
