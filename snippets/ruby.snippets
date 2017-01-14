@@ -1,3 +1,7 @@
+snippet def
+	def ${1}
+	  ${2}
+	end
 snippet debug
 	require 'debugger'
 	debugger
@@ -15,6 +19,10 @@ snippet describe
 	end
 snippet it{}
 	it { ${1} }
+snippet itdo
+	it "${1}" do
+	  ${2}
+	end
 snippet let{}
 	let(:${1:name}) { ${2} }
 snippet context

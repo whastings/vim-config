@@ -36,6 +36,7 @@ call vundle#begin()
   Plugin 'mustache/vim-mustache-handlebars'
   Plugin 'flowtype/vim-flow'
   Plugin 'mileszs/ack.vim'
+  Plugin 'tpope/vim-endwise'
   " TypeScript
   Plugin 'leafgarland/typescript-vim'
   Plugin 'Shougo/vimproc.vim'
