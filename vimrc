@@ -200,6 +200,10 @@ command SCO setlocal nospell " Disable spell check.
 
 " PLUGIN SETTINGS:
 
+" Ack.vim:
+" Use command that doesn't jump to first result
+cnoreabbrev Ack Ack!
+
 " Syntastic:
 let g:syntastic_check_on_open = 1
 let g:syntastic_javascript_checkers = ['eslint']
