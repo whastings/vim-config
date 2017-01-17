@@ -37,6 +37,7 @@ call vundle#begin()
   Plugin 'flowtype/vim-flow'
   Plugin 'mileszs/ack.vim'
   Plugin 'tpope/vim-endwise'
+  Plugin 'FooSoft/vim-argwrap'
   " TypeScript
   Plugin 'leafgarland/typescript-vim'
   Plugin 'Shougo/vimproc.vim'
@@ -191,6 +192,9 @@ nmap <Leader>b :BufExplorer <cr>
 
 " Autocomplete:
 imap <C-p> <C-x><C-o>
+
+" argwrap
+nnoremap <silent> <leader>a :ArgWrap<CR>
 
 
 " CUSTOM COMMANDS:
