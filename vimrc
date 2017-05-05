@@ -166,6 +166,7 @@ au FileType javascript.jsx let b:delimitMate_matchpairs = delimitMate_matchpairs
 
 " FZF
 let $FZF_DEFAULT_COMMAND = 'ag --hidden -l -g ""'
+let g:fzf_command_prefix = 'Fzf'
 nmap <C-p> :FZF -m<CR>
 nmap <LocalLeader>a :FzfAg<Space>
 if executable('ag')
