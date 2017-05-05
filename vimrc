@@ -167,8 +167,12 @@ au FileType javascript.jsx let b:delimitMate_matchpairs = delimitMate_matchpairs
 " FZF
 let $FZF_DEFAULT_COMMAND = 'ag --hidden -l -g ""'
 let g:fzf_command_prefix = 'Fzf'
+let g:fzf_history_options =
+   \ '--reverse ' .
+   \ '--preview "(coderay {} || cat {}) 2> /dev/null | head -'.&lines.'"'
 nmap <C-p> :FZF -m<CR>
 nmap <LocalLeader>a :FzfAg<Space>
+nnoremap <C-b> :FzfHistory<cr>
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor " Use ag over grep
 endif
