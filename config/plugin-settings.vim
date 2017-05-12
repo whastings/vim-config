@@ -47,3 +47,6 @@ endfunction
 call FlowOff() " Off by default since the plugin runs on files without @flow
 command FlowOn call FlowOn()
 command FlowOff call FlowOff()
+
+" vim-jsx
+let g:jsx_ext_required = 0
