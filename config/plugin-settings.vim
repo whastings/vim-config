@@ -9,6 +9,7 @@ map <LocalLeader>c :TComment<CR>
 " NERDTree:
 let NERDTreeShowLineNumbers=1
 let NERDTreeShowHidden=1
+nnoremap <C-t> :NERDTreeToggle<CR>
 
 " vim-json:
 let g:vim_json_syntax_conceal = 0 " Don't hide key quotes.
