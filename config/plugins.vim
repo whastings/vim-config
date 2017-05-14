@@ -3,7 +3,7 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-  Plugin 'scrooloose/nerdcommenter'
+  Plugin 'tomtom/tcomment_vim'
   Plugin 'scrooloose/nerdtree'
   Plugin 'garbas/vim-snipmate'
   Plugin 'scrooloose/syntastic'

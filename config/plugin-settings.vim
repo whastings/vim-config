@@ -3,10 +3,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_html_checkers = [] " TODO: Find a good HTML linter.
 
-" NERDCommenter:
-let g:NERDCustomDelimiters = {
-  \ 'scss': { 'left': '// ' }
-\ }
+" TComment:
+map <LocalLeader>c :TComment<CR>
 
 " NERDTree:
 let NERDTreeShowLineNumbers=1
