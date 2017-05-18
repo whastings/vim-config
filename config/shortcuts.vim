@@ -63,6 +63,9 @@ nmap <silent> W <Plug>CamelCaseMotion_w
 nmap <silent> B <Plug>CamelCaseMotion_b
 nmap <silent> E <Plug>CamelCaseMotion_e
 
+" Copy file path
+nnoremap <LocalLeader>f :let @+=expand('%')<CR>
+
 " Environment-dependent
 let s:uname = system("uname")
 if s:uname == "Darwin\n"
