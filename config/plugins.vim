@@ -25,6 +25,7 @@ call vundle#begin()
   Plugin 'tpope/vim-endwise'
   Plugin 'AndrewRadev/splitjoin.vim'
   Plugin 'junegunn/fzf.vim'
+  Plugin 'mtscout6/syntastic-local-eslint.vim'
   if s:uname == "Darwin\n"
     Plugin 'junegunn/fzf', { 'dir': '/usr/local/opt/fzf', 'do': './install --all' }
   else
