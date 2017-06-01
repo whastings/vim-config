@@ -49,3 +49,7 @@ command FlowOff call FlowOff()
 
 " vim-jsx
 let g:jsx_ext_required = 0
+
+" vim-fixmyjs
+let g:fixmyjs_use_local = 1
+let g:fixmyjs_rc_path = '.eslintrc.js'
