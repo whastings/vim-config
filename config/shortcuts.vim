@@ -66,9 +66,13 @@ nmap <silent> E <Plug>CamelCaseMotion_e
 " Copy file path
 nnoremap <LocalLeader>f :let @+=expand('%')<CR>
 
+" Tab to navigate to next Snipmate anchor point
+imap <Tab> <Plug>snipMateNextOrTrigger
+
 " Environment-dependent
 let s:uname = system("uname")
 if s:uname == "Darwin\n"
   " Copy to clipboard
   vnoremap <C-c> :w !pbcopy<CR><CR> noremap <C-v> :r !pbpaste<CR><CR>
 endif
+
