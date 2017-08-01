@@ -21,7 +21,7 @@ call vundle#begin()
   Plugin 'bling/vim-airline'
   Plugin 'mxw/vim-jsx'
   Plugin 'gregsexton/MatchTag'
-  Plugin 'othree/xml.vim'
+  Plugin 'alvan/vim-closetag'
   Plugin 'tpope/vim-endwise'
   Plugin 'AndrewRadev/splitjoin.vim'
   Plugin 'junegunn/fzf.vim'

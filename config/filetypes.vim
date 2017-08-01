@@ -3,6 +3,7 @@ autocmd BufNewFile,BufRead *.json.jbuilder set filetype=ruby
 autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
 autocmd BufNewFile,BufRead *.jst.ejs set filetype=html
 autocmd BufNewFile,BufRead *.ejs set filetype=html
+autocmd BufNewFile,BufRead *.hbs set filetype=html
 augroup writing
     au!
     au BufNewFile,BufRead *.md,*.markdown,*.rst setlocal textwidth=100

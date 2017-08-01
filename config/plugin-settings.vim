@@ -53,3 +53,7 @@ let g:jsx_ext_required = 0
 " vim-fixmyjs
 let g:fixmyjs_use_local = 1
 let g:fixmyjs_rc_path = '.eslintrc.js'
+
+" vim-closetag
+let g:closetag_filenames = '*.html,*.jsx,*.js'
+let g:closetag_xhtml_filenames = '*.html,*.jsx,*.js'
