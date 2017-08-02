@@ -33,6 +33,9 @@ call vundle#begin()
     Plugin 'junegunn/fzf', { 'dir': '~/dot-files/vendor/fzf', 'do': './install --all' }
   endif
   Plugin 'flowtype/vim-flow'
+  if $VIM_RAILS_SUPPORT == "true"
+    Plugin 'tpope/vim-rails'
+  endif
 call vundle#end()
 filetype plugin indent on
 syntax on
