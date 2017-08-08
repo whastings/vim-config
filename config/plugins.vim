@@ -36,6 +36,9 @@ call vundle#begin()
   if $VIM_RAILS_SUPPORT == "true"
     Plugin 'tpope/vim-rails'
   endif
+  if $VIM_COFFEE_SCRIPT_SUPPORT == "true"
+    Plugin 'kchmck/vim-coffee-script'
+  endif
 call vundle#end()
 filetype plugin indent on
 syntax on
