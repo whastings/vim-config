@@ -27,6 +27,7 @@ call vundle#begin()
   Plugin 'junegunn/fzf.vim'
   Plugin 'mtscout6/syntastic-local-eslint.vim'
   Plugin 'ruanyl/vim-fixmyjs'
+  Plugin 'sbdchd/neoformat'
   if s:uname == "Darwin\n"
     Plugin 'junegunn/fzf', { 'dir': '/usr/local/opt/fzf', 'do': './install --all' }
   else

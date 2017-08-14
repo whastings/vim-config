@@ -58,3 +58,17 @@ let g:fixmyjs_rc_path = '.eslintrc.js'
 let g:closetag_filenames = '*.html,*.jsx,*.js'
 let g:closetag_xhtml_filenames = '*.html,*.jsx,*.js'
 let g:closetag_close_shortcut = 'C->'
+
+" neoformat
+" See: https://hashrocket.com/blog/posts/writing-prettier-javascript-in-vim
+let g:neoformat_try_formatprg = 1
+augroup NeoformatAutoFormat
+    autocmd!
+    autocmd FileType javascript,javascript.jsx setlocal formatprg=prettier\
+                                                            \--stdin\
+                                                            \--print-width\ 100\
+                                                            \--single-quote\
+                                                            \--trailing-comma\ es5
+augroup END
+nmap <Leader>f :Neoformat<CR>
+vmap <Leader>f :Neoformat<CR>
