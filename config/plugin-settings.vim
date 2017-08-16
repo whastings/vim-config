@@ -70,5 +70,5 @@ augroup NeoformatAutoFormat
                                                             \--single-quote\
                                                             \--trailing-comma\ es5
 augroup END
-nmap <Leader>f :Neoformat<CR>
-vmap <Leader>f :Neoformat<CR>
+nmap <Leader>F :Neoformat<CR>
+vmap <Leader>F :Neoformat<CR>
