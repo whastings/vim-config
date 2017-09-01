@@ -35,10 +35,10 @@ nmap <C-l> <C-w>l
 nmap <C-h> <C-w>h
 
 " Pane resizing:
-nnoremap <Left> :vertical resize +2<CR>
-nnoremap <Right> :vertical resize -2<CR>
-nnoremap <Up> :resize +2<CR>
-nnoremap <Down> :resize -2<CR>
+nnoremap <Leader><Left> :vertical resize +2<CR>
+nnoremap <Leader><Right> :vertical resize -2<CR>
+nnoremap <Leader><Up> :resize +2<CR>
+nnoremap <Leader><Down> :resize -2<CR>
 
 " Visually select the text that was last edited/pasted.
 nmap gV `[v`]`
