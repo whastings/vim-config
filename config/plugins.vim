@@ -6,7 +6,6 @@ call vundle#begin()
   Plugin 'tomtom/tcomment_vim'
   Plugin 'scrooloose/nerdtree'
   Plugin 'garbas/vim-snipmate'
-  Plugin 'scrooloose/syntastic'
   Plugin 'pangloss/vim-javascript'
   Plugin 'tpope/vim-markdown'
   Plugin 'jeffkreeftmeijer/vim-numbertoggle'
@@ -25,16 +24,21 @@ call vundle#begin()
   Plugin 'tpope/vim-endwise'
   Plugin 'AndrewRadev/splitjoin.vim'
   Plugin 'junegunn/fzf.vim'
-  Plugin 'mtscout6/syntastic-local-eslint.vim'
   Plugin 'ruanyl/vim-fixmyjs'
   Plugin 'sbdchd/neoformat'
   Plugin 'tpope/vim-fugitive'
+  Plugin 'flowtype/vim-flow'
   if s:uname == "Darwin\n"
     Plugin 'junegunn/fzf', { 'dir': '/usr/local/opt/fzf', 'do': './install --all' }
   else
     Plugin 'junegunn/fzf', { 'dir': '~/dot-files/vendor/fzf', 'do': './install --all' }
   endif
-  Plugin 'flowtype/vim-flow'
+  if v:version >= 800
+    Plugin 'w0rp/ale'
+  else
+    Plugin 'scrooloose/syntastic'
+    Plugin 'mtscout6/syntastic-local-eslint.vim'
+  endif
   if $VIM_RAILS_SUPPORT == "true"
     Plugin 'tpope/vim-rails'
   endif
