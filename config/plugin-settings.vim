@@ -3,6 +3,9 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_html_checkers = [] " TODO: Find a good HTML linter.
 
+" ALE:
+let g:ale_lint_on_text_changed = 'never'
+
 " TComment:
 map <LocalLeader>c :TComment<CR>
 
