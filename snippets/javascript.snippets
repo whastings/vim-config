@@ -180,20 +180,20 @@ snippet epd
 snippet d
 	debugger
 # TESTING:
-snippet describe
-	describe('${1:feature}', function() {
+snippet desc
+	describe('${1:feature}', () => {
 	  ${2}
 	});
 snippet it
-	it('${1:expectation}', function() {
+	it('${1:expectation}', () => {
 	  ${2}
 	});
 snippet be
-	beforeEach(function() {
+	beforeEach(() => {
 	  ${1}
 	});
 snippet ae
-	afterEach(function() {
+	afterEach(() => {
 	  ${1}
 	});
 snippet qt
