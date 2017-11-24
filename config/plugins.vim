@@ -28,6 +28,7 @@ call vundle#begin()
   Plugin 'sbdchd/neoformat'
   Plugin 'tpope/vim-fugitive'
   Plugin 'flowtype/vim-flow'
+  Plugin 'mattn/emmet-vim'
   if s:uname == "Darwin\n"
     Plugin 'junegunn/fzf', { 'dir': '/usr/local/opt/fzf', 'do': './install --all' }
   else
