@@ -75,3 +75,6 @@ augroup NeoformatAutoFormat
 augroup END
 nmap <Leader>F :Neoformat<CR>
 vmap <Leader>F :Neoformat<CR>
+
+" Ack.vim
+cnoreabbrev Ack Ack!
