@@ -31,6 +31,7 @@ let g:fzf_history_options =
    \ '--preview "(coderay {} || cat {}) 2> /dev/null | head -'.&lines.'"'
 nmap <C-p> :FZF -m<CR>
 nmap <LocalLeader>a :FzfAg<Space>
+nmap <LocalLeader>A :FzfAg<Space><C-R><C-W>
 nnoremap <C-b> :FzfHistory<cr>
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor " Use ag over grep
