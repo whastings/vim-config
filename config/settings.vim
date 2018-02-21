@@ -31,3 +31,5 @@ highlight ColorColumn ctermbg=darkgrey " Make column gray.
 highlight Comment term=bold ctermfg=lightblue
 " Remove trailing whitespace:
 autocmd BufWritePre * :%s/\s\+$//e
+" Always add comment characters on new line of a comment block.
+set formatoptions+=ro
